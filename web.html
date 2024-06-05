@@ -4,6 +4,31 @@
 	Web de Cristina y Adrián
 	
 	<style>
+	
+			/* Color Theme Swatches in Hex */
+			.My-Color-Theme-1-hex { color: #F564AE; }
+			.My-Color-Theme-2-hex { color: #64E4F5; }
+			.My-Color-Theme-3-hex { color: #F5E464; }
+			.My-Color-Theme-4-hex { color: #A09B77; }
+			.My-Color-Theme-5-hex { color: #75686F; }
+			.My-Color-Theme-6-hex { color: #687475; }
+
+			/* Color Theme Swatches in RGBA */
+			.My-Color-Theme-1-rgba { color: rgba(245, 100, 174, 1); }
+			.My-Color-Theme-2-rgba { color: rgba(100, 228, 245, 1); }
+			.My-Color-Theme-3-rgba { color: rgba(245, 228, 100, 1); }
+			.My-Color-Theme-4-rgba { color: rgba(160, 155, 119, 1); }
+			.My-Color-Theme-5-rgba { color: rgba(117, 104, 111, 1); }
+			.My-Color-Theme-6-rgba { color: rgba(104, 116, 117, 1); }
+
+			/* Color Theme Swatches in HSLA */
+			.My-Color-Theme-1-hsla { color: hsla(329, 87, 67, 1); }
+			.My-Color-Theme-2-hsla { color: hsla(187, 87, 67, 1); }
+			.My-Color-Theme-3-hsla { color: hsla(52, 87, 67, 1); }
+			.My-Color-Theme-4-hsla { color: hsla(52, 17, 54, 1); }
+			.My-Color-Theme-5-hsla { color: hsla(327, 5, 43, 1); }
+			.My-Color-Theme-6-hsla { color: hsla(184, 5, 43, 1); }
+
 		#quote-container {
             position: fixed;
             bottom: 0;
@@ -26,6 +51,39 @@
                 transform: translateX(-100%);
             }
         }
+		P{
+			background-color: #fff;
+			color: #444;
+			font-family: "Times New Roman";
+			font-feature-settings: "'liga' 1";
+			font-kerning: auto;
+			font-style: normal;
+			font-size: 1.8em;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 1.5em;
+			text-align: left;
+			text-decoration: none;
+			text-transform: none;
+			word-spacing: 0;
+		}
+		H1 {
+			background-color: #c2e0f0;
+			color: #444;
+			font-family: "Times New Roman";
+			font-feature-settings: "'liga' 1";
+			font-kerning: auto;
+			font-style: normal;
+			font-size: 3em;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 1.5em;
+			text-align: left;
+			text-decoration: none;
+			text-transform: none;
+			word-spacing: 0;
+			border: 20px blue solid; 
+			}
     </style>
 </head>
 <body>
@@ -55,7 +113,7 @@
 	
 	<div id='texts'>
 		<div id='kmeans'>
-			<p id='kmeans1'>
+			<p id='kmeans1' class="My-Color-Theme-1-hex">
 				El algoritmo de clustering K-Means fue propuesto por Stuart Lloyd en 1957, aunque no se publicó
 				hasta 1982 en <a href="https://ieeexplore.ieee.org/abstract/document/1056489"> Lloyd, S. (1982) <a>. 
 				Una de las principales ventajas de K-Means es que converge siempre y suele necesitar
