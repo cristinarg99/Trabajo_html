@@ -12,7 +12,7 @@ updateClock(); // Llamada inicial para que no haya retraso
 
 // Generador de citas aleatorias
 const quotes = [
-    "Frase 1",
+    "Frase 1Frase 1Frase 1Frase blablablabla",
     "Frase 2",
     "Frase 3",
     "Frase 4",

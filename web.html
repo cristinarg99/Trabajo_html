@@ -1,7 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	Web de Cristina y Adrián
+	
+	<style>
+		#quote-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            overflow: hidden;
+        }
+        #quote {
+            display: inline-block;
+            white-space: nowrap;
+            padding: 10px 0;
+            animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
 </head>
 <body>
 	<div id="clock">Cargando reloj...</div>
@@ -62,7 +87,9 @@
 		</div>
 	</div>
 	
-	<div id="quote"></div>
+	<div id="quote-container">
+		<div id="quote"></div>
+	</div>
 	
 	<!-- Ocultar la información sobre los modelos al entrar a la web: -->
 	<script>
