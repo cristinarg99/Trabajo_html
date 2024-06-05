@@ -26,5 +26,14 @@ function generateQuote() {
     quoteElement.textContent = quote;
 }
 
+function displayWithButton(text_id){
+	var texto = document.getElementById(text_id);
+    if (texto.style.display === "none") {
+        texto.style.display = "initial";
+    } else {
+        texto.style.display = "none";
+    }
+}
+
 setInterval(generateQuote, 10000); // Cambia la cita cada 10 segundos
 generateQuote();

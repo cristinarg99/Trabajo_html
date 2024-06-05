@@ -83,7 +83,11 @@
 			text-transform: none;
 			word-spacing: 0;
 			border: 20px blue solid; 
-			}
+		}
+		
+		#buttons-texts {
+			margin-bottom: 4em;
+		}
     </style>
 </head>
 <body>
@@ -98,28 +102,19 @@
 		</p>
 	</div>
 	
-	<div id='buttons'>
-		<!-- Botón para mostrar la info de k-means (y ocultar la de dbscan) -->
+	<div id='buttons-texts'>
 		<button 
-		onclick="document.getElementById('dbscan').style.display='none';
-				document.getElementById('kmeans').style.display='initial';"> K-Means
+		onclick=displayWithButton('kmeans')> K-Means
 		</button>
-		<!-- Botón para mostrar la info de dbscan (y ocultar la de k-means) -->
-		<button 
-		onclick="document.getElementById('kmeans').style.display='none';
-				document.getElementById('dbscan').style.display='initial';"> DBSCAN
-		</button>
-	</div>
-	
-	<div id='texts'>
-		<div id='kmeans'>
-			<p id='kmeans1' class="My-Color-Theme-1-hex">
+		
+		<div id='kmeans' class="My-Color-Theme-1-hex" >
+			<p id='kmeans1' class="texto">
 				El algoritmo de clustering K-Means fue propuesto por Stuart Lloyd en 1957, aunque no se publicó
 				hasta 1982 en <a href="https://ieeexplore.ieee.org/abstract/document/1056489"> Lloyd, S. (1982) <a>. 
 				Una de las principales ventajas de K-Means es que converge siempre y suele necesitar
 				solo unas pocas iteraciones para hacerlo. 
 			</p>
-			<p id='kmeans2'>
+			<p id='kmeans2' class="texto">
 				Con este algoritmo, el usuario puede definir el número de clusters deseado. El entrenamiento comienza
 				asignando de forma aleatoria una de las muestras del conjunto a cada cluster. Estas muestras
 				elegidas se denominan centroides de los clusters. Para el resto de puntos del conjunto, se calcula la distancia
@@ -128,14 +123,19 @@
 				moviéndose hacia el centro del cluster obtenido en la iteración anterior <a href="https://books.google.es/books?hl=es&lr=&id=X5ySEAAAQBAJ&oi=fnd&pg=PT10&dq=Aur%C3%A9lien+G%C3%A9ron.+Hands-on+machine+learning+with+Scikit-Learn,+Keras,+and+TensorFlow.+.+O%E2%80%99Reilly+Media,+Inc.%22,+2022.&ots=yC_xtm37vN&sig=edir6wjroHUIdg5Amv8lgozATlY#v=onepage&q=Aur%C3%A9lien%20G%C3%A9ron.%20Hands-on%20machine%20learning%20with%20Scikit-Learn%2C%20Keras%2C%20and%20TensorFlow.%20.%20O%E2%80%99Reilly%20Media%2C%20Inc.%22%2C%202022.&f=false"> (Géron, A. 2022) <a>. 
 			</p>
 		</div>
+		
+		<button 
+		onclick=displayWithButton('dbscan')> DBSCAN
+		</button>
+			
 		<div id='dbscan'>
-			<p id='dbscan1'>
+			<p id='dbscan1' class="texto">
 				El algoritmo de clustering DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
 				es una técnica de aprendizaje no supervisado que define los clusters como regiones continuas con alta
 				densidad. Para cada muestra, el algoritmo cuenta cuántas muestras están localizadas a una distancia
 				corta ϵ. Esta región se llama ϵ-neighbourhood. 
 			</p>
-			<p id='dbscan2'>
+			<p id='dbscan2' class="texto">
 				Como se observa en la figura 4.12, un punto es considerado centro si tiene un número mínimo de
 				muestras en su vecindario. Un punto es considerado un punto fronterizo si tiene menos del número
 				mínimo de muestras en su vecindario pero está dentro del vecindario de un núcleo. El resto de puntos se
@@ -143,6 +143,7 @@
 				en un mismo cluster <a href="https://books.google.es/books?hl=es&lr=&id=sKXIDwAAQBAJ&oi=fnd&pg=PP1&dq=Sebastian+Raschka+y+Vahid+Mirjalili.+Python+machine+learning:+Machine+learning+and+deep+learning+with+Python,+scikit-learn,+and+TensorFlow+2.+Packt+Publishing+Ltd,+2019.&ots=VaDoqXUJKp&sig=IEgxP5MmzmVxLPfl6qL9xjaxxcQ#v=onepage&q=Sebastian%20Raschka%20y%20Vahid%20Mirjalili.%20Python%20machine%20learning%3A%20Machine%20learning%20and%20deep%20learning%20with%20Python%2C%20scikit-learn%2C%20and%20TensorFlow%202.%20Packt%20Publishing%20Ltd%2C%202019.&f=false"> (Raschka, S., & Mirjalili, V. 2019) <a>. 
 			</p>
 		</div>
+	
 	</div>
 	
 	<div id="quote-container">
