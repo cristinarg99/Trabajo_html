@@ -26,12 +26,15 @@ function generateQuote() {
     quoteElement.textContent = quote;
 }
 
-function displayWithButton(text_id){
-	var texto = document.getElementById(text_id);
+function displayWithButton(text_id, button_id){
+	var texto = document.getElementById(text_id, button_id);
+	var button = document.getElementById(button_id);
     if (texto.style.display === "none") {
         texto.style.display = "initial";
+        button.classList.add('active-button');
     } else {
         texto.style.display = "none";
+        button.classList.remove('active-button');
     }
 }
 

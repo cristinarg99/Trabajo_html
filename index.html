@@ -5,30 +5,17 @@
 	
 	<style>
 	
-			/* Color Theme Swatches in Hex */
-			.My-Color-Theme-1-hex { color: #F564AE; }
-			.My-Color-Theme-2-hex { color: #64E4F5; }
-			.My-Color-Theme-3-hex { color: #F5E464; }
-			.My-Color-Theme-4-hex { color: #A09B77; }
-			.My-Color-Theme-5-hex { color: #75686F; }
-			.My-Color-Theme-6-hex { color: #687475; }
+		/* Color Theme Swatches in Hex */
+		.My-Color-Theme-1-hex { color: #F564AE; }
+		.My-Color-Theme-2-hex { color: #64E4F5; }
+		.My-Color-Theme-3-hex { color: #F5E464; }
+		.My-Color-Theme-4-hex { color: #A09B77; }
+		.My-Color-Theme-5-hex { color: #75686F; }
+		.My-Color-Theme-6-hex { color: #687475; }
 
-			/* Color Theme Swatches in RGBA */
-			.My-Color-Theme-1-rgba { color: rgba(245, 100, 174, 1); }
-			.My-Color-Theme-2-rgba { color: rgba(100, 228, 245, 1); }
-			.My-Color-Theme-3-rgba { color: rgba(245, 228, 100, 1); }
-			.My-Color-Theme-4-rgba { color: rgba(160, 155, 119, 1); }
-			.My-Color-Theme-5-rgba { color: rgba(117, 104, 111, 1); }
-			.My-Color-Theme-6-rgba { color: rgba(104, 116, 117, 1); }
-
-			/* Color Theme Swatches in HSLA */
-			.My-Color-Theme-1-hsla { color: hsla(329, 87, 67, 1); }
-			.My-Color-Theme-2-hsla { color: hsla(187, 87, 67, 1); }
-			.My-Color-Theme-3-hsla { color: hsla(52, 87, 67, 1); }
-			.My-Color-Theme-4-hsla { color: hsla(52, 17, 54, 1); }
-			.My-Color-Theme-5-hsla { color: hsla(327, 5, 43, 1); }
-			.My-Color-Theme-6-hsla { color: hsla(184, 5, 43, 1); }
-
+		.active-button {
+            border: 3px solid #000; /* Thicker border when active */}
+		
 		#quote-container {
             position: fixed;
             bottom: 0;
@@ -68,7 +55,7 @@
 			word-spacing: 0;
 		}
 		H1 {
-			background-color: #c2e0f0;
+			background-color: #A4EDAA;
 			color: #444;
 			font-family: "Times New Roman";
 			font-feature-settings: "'liga' 1";
@@ -81,8 +68,8 @@
 			text-align: left;
 			text-decoration: none;
 			text-transform: none;
-			word-spacing: 0;
-			border: 20px blue solid; 
+			word-spaci9ng: 0;
+			border: 20px solid #5CA062; 
 		}
 		
 		#buttons-texts {
@@ -104,7 +91,6 @@
 		La clusterización es una técnica de aprendizaje no supervisado utilizada para agrupar datos similares
 		en conjuntos llamados clusters. En esta sección se describen dos algoritmos comúnmente utilizados para
 		la clusterización: K-means y DBSCAN.
-		<a href="https://media.licdn.com/dms/image/C4E03AQG-D6CytXUM_g/profile-displayphoto-shrink_200_200/0/1651906494127?e=2147483647&v=beta&t=RhPCntLB6dOdPAgHdXilXu2D369CKhK9FPJP18PL5ws"> aquí <a>
 		</p>
 	</div>
 	<div>
@@ -113,14 +99,24 @@
 			alt="Ejemplo de clusters"
 			auto-rotate 
 			camera-controls
+			style="width: 600px; height: 400px;"
 		></model-viewer>
 	</div>
 	<div id='buttons-texts'>
 		<button 
-		onclick=displayWithButton('kmeans')> K-Means
+		onclick="displayWithButton('kmeans', 'button1')"  
+		class="My-Color-Theme-1-hex" 
+		id="button1"> K-Means 
+		</button>
+		
+		<button 
+		onclick="displayWithButton('dbscan', 'button2')"  
+		class="My-Color-Theme-2-hex" 
+		id="button2"> DBSCAN
 		</button>
 		
 		<div id='kmeans' class="My-Color-Theme-1-hex" >
+			<h2>K-Means</h2>
 			<p id='kmeans1' class="texto">
 				El algoritmo de clustering K-Means fue propuesto por Stuart Lloyd en 1957, aunque no se publicó
 				hasta 1982 en <a href="https://ieeexplore.ieee.org/abstract/document/1056489"> Lloyd, S. (1982) <a>. 
@@ -132,16 +128,14 @@
 				asignando de forma aleatoria una de las muestras del conjunto a cada cluster. Estas muestras
 				elegidas se denominan centroides de los clusters. Para el resto de puntos del conjunto, se calcula la distancia
 				a todos los centroides y se asigna la muestra al cluster cuyo centroide es el más cercano a dicho
-				punto. Como se observa en la figura 4.11, en cada iteración se modifica la posición de los centroides,
+				punto. En cada iteración se modifica la posición de los centroides,
 				moviéndose hacia el centro del cluster obtenido en la iteración anterior <a href="https://books.google.es/books?hl=es&lr=&id=X5ySEAAAQBAJ&oi=fnd&pg=PT10&dq=Aur%C3%A9lien+G%C3%A9ron.+Hands-on+machine+learning+with+Scikit-Learn,+Keras,+and+TensorFlow.+.+O%E2%80%99Reilly+Media,+Inc.%22,+2022.&ots=yC_xtm37vN&sig=edir6wjroHUIdg5Amv8lgozATlY#v=onepage&q=Aur%C3%A9lien%20G%C3%A9ron.%20Hands-on%20machine%20learning%20with%20Scikit-Learn%2C%20Keras%2C%20and%20TensorFlow.%20.%20O%E2%80%99Reilly%20Media%2C%20Inc.%22%2C%202022.&f=false"> (Géron, A. 2022) <a>. 
 			</p>
 		</div>
 		
-		<button 
-		onclick=displayWithButton('dbscan')> DBSCAN
-		</button>
 			
-		<div id='dbscan'>
+		<div id='dbscan' class="My-Color-Theme-2-hex">
+			<h2>DBSCAN</h2>
 			<p id='dbscan1' class="texto">
 				El algoritmo de clustering DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
 				es una técnica de aprendizaje no supervisado que define los clusters como regiones continuas con alta
@@ -149,11 +143,11 @@
 				corta ϵ. Esta región se llama ϵ-neighbourhood. 
 			</p>
 			<p id='dbscan2' class="texto">
-				Como se observa en la figura 4.12, un punto es considerado centro si tiene un número mínimo de
-				muestras en su vecindario. Un punto es considerado un punto fronterizo si tiene menos del número
-				mínimo de muestras en su vecindario pero está dentro del vecindario de un núcleo. El resto de puntos se
-				consideran ruido. Entonces, todos los puntos que pertenezcan a un mismo vecindario serán clasificados
-				en un mismo cluster <a href="https://books.google.es/books?hl=es&lr=&id=sKXIDwAAQBAJ&oi=fnd&pg=PP1&dq=Sebastian+Raschka+y+Vahid+Mirjalili.+Python+machine+learning:+Machine+learning+and+deep+learning+with+Python,+scikit-learn,+and+TensorFlow+2.+Packt+Publishing+Ltd,+2019.&ots=VaDoqXUJKp&sig=IEgxP5MmzmVxLPfl6qL9xjaxxcQ#v=onepage&q=Sebastian%20Raschka%20y%20Vahid%20Mirjalili.%20Python%20machine%20learning%3A%20Machine%20learning%20and%20deep%20learning%20with%20Python%2C%20scikit-learn%2C%20and%20TensorFlow%202.%20Packt%20Publishing%20Ltd%2C%202019.&f=false"> (Raschka, S., & Mirjalili, V. 2019) <a>. 
+				Un punto es considerado centro si tiene un número mínimo de muestras en su vecindario. 
+				Un punto es considerado un punto fronterizo si tiene menos del número mínimo de muestras en su vecindario pero está dentro del vecindario de un núcleo. 
+				El resto de puntos se consideran ruido. 
+				Entonces, todos los puntos que pertenezcan a un mismo vecindario serán clasificados	en un mismo 
+				cluster <a href="https://books.google.es/books?hl=es&lr=&id=sKXIDwAAQBAJ&oi=fnd&pg=PP1&dq=Sebastian+Raschka+y+Vahid+Mirjalili.+Python+machine+learning:+Machine+learning+and+deep+learning+with+Python,+scikit-learn,+and+TensorFlow+2.+Packt+Publishing+Ltd,+2019.&ots=VaDoqXUJKp&sig=IEgxP5MmzmVxLPfl6qL9xjaxxcQ#v=onepage&q=Sebastian%20Raschka%20y%20Vahid%20Mirjalili.%20Python%20machine%20learning%3A%20Machine%20learning%20and%20deep%20learning%20with%20Python%2C%20scikit-learn%2C%20and%20TensorFlow%202.%20Packt%20Publishing%20Ltd%2C%202019.&f=false"> (Raschka, S., & Mirjalili, V. 2019) <a>. 
 			</p>
 		</div>
 	
