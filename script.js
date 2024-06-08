@@ -38,5 +38,5 @@ function displayWithButton(text_id, button_id){
     }
 }
 
-setInterval(generateQuote, 15000); // Cambia la cita cada 10 segundos
+setInterval(generateQuote, 15000); // Cambia la cita cada 15 segundos
 generateQuote();
